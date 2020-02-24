@@ -27,6 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// app.js
+// 在 app 中加载这个模块.
+var api = require('./routes/api');
+app.use('/api', api.index);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
