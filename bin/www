@@ -11,7 +11,7 @@ var http = require('http');
 /**
  * Get port from environment and store in Express.
  */
-
+// port 变量, 就是访问端口.
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -25,6 +25,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
+// 监听 port 端口
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
